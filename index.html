@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Center</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+  text-align: center;
+}
+header {
+  padding: 22px;
+  color: gold;
+  background: #202020;
+}
+.banner {
+  margin: 20px;
+  padding: 30px 10px;
+  border: 1px solid gold;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#403000,#111);
+}
+.games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+}
+.game {
+  background: #252525;
+  padding: 22px 5px;
+  border-radius: 12px;
+}
+button {
+  background: gold;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+footer {
+  padding: 20px;
+  color: #bbb;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>GAME CENTER</h1>
+  <p>Portal Game Hiburan</p>
+</header>
+<section class="banner">
+  <h2>SELAMAT DATANG!</h2>
+  <p>Jelajahi koleksi game favoritmu</p>
+</section>
+<h2>DAFTAR GAME</h2>
+<section class="games">
+  <div class="game">🎮<p>Arcade</p></div>
+  <div class="game">🧩<p>Puzzle</p></div>
+  <div class="game">🚀<p>Petualangan</p></div>
+  <div class="game">🏆<p>Tantangan</p></div>
+</section>
+<h2>Poin Demo</h2>
+<p>Poin virtual: <strong id="poin">100</strong></p>
+<button onclick="tambahPoin()">Tambah 10 Poin</button>
+<footer>Game Center Demo • Tanpa uang asli</footer>
+<script>
+let poin = 100;
+function tambahPoin() {
+  poin += 10;
+  document.getElementById("poin").textContent = poin;
+}
+</script>
+</body>
+</html>
